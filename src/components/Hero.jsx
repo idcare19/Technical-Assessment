@@ -16,7 +16,7 @@ function Hero() {
 				</div>
 
 				<img
-					src="/hero.webp"
+					src="/hero.svg"
 					alt="Team collaborating on website design"
 					width="800"
 					height="520"

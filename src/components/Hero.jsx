@@ -16,14 +16,13 @@ function Hero() {
 				</div>
 
 				<img
-					src="/hero-illustration.svg"
+					src="public/hero.webp"
 					alt="Team collaborating on website design"
 					width="800"
 					height="520"
 					className="hero-image"
-					loading="eager"
 					fetchPriority="high"
-					decoding="sync"
+					decoding="async"
 				/>
 			</div>
 		</section>

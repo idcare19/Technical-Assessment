@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://internship-website-demo.vercel.app/sitemap.xml
+Sitemap: https://assesment.idcare19.me/sitemap.xml

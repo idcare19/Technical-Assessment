@@ -1,16 +1,18 @@
+import { Suspense, lazy } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import Services from "./components/Services";
-import Products from "./components/Products";
-import CTA from "./components/CTA";
-import WhyChooseUs from "./components/WhyChooseUs";
-import FAQ from "./components/FAQ";
-import Testimonials from "./components/Testimonials";
-import Blogs from "./components/Blogs";
-import Contact from "./components/Contact";
-import MapSection from "./components/MapSection";
-import Footer from "./components/Footer";
 import SeoSchemas from "./components/SeoSchemas";
+
+const Services = lazy(() => import("./components/Services"));
+const Products = lazy(() => import("./components/Products"));
+const CTA = lazy(() => import("./components/CTA"));
+const WhyChooseUs = lazy(() => import("./components/WhyChooseUs"));
+const FAQ = lazy(() => import("./components/FAQ"));
+const Testimonials = lazy(() => import("./components/Testimonials"));
+const Blogs = lazy(() => import("./components/Blogs"));
+const Contact = lazy(() => import("./components/Contact"));
+const MapSection = lazy(() => import("./components/MapSection"));
+const Footer = lazy(() => import("./components/Footer"));
 
 function App() {
   return (
@@ -18,16 +20,18 @@ function App() {
       <SeoSchemas />
       <Navbar />
       <Hero />
-      <Services />
-      <Products />
-      <CTA />
-      <WhyChooseUs />
-      <FAQ />
-      <Testimonials />
-      <Blogs />
-      <Contact />
-      <MapSection />
-      <Footer />
+      <Suspense fallback={null}>
+        <Services />
+        <Products />
+        <CTA />
+        <WhyChooseUs />
+        <FAQ />
+        <Testimonials />
+        <Blogs />
+        <Contact />
+        <MapSection />
+        <Footer />
+      </Suspense>
     </>
   );
 }

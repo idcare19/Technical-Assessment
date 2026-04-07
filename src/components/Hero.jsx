@@ -16,13 +16,14 @@ function Hero() {
 				</div>
 
 				<img
-					src="https://picsum.photos/id/26/800/520.webp"
+					src="/hero-illustration.svg"
 					alt="Team collaborating on website design"
 					width="800"
 					height="520"
 					className="hero-image"
+					loading="eager"
 					fetchPriority="high"
-					decoding="async"
+					decoding="sync"
 				/>
 			</div>
 		</section>
